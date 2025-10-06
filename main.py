@@ -1,19 +1,3 @@
-"""
-Event-Based Video Recorder with YOLOv8 Object Detection
--------------------------------------------------------
-Author: AbuZar (Internship Assignment)
-Description:
-    - Uses YOLOv8 to detect objects (person, car, dog, cat, etc.)
-    - Draws bounding boxes with labels and confidence scores
-    - Continuously buffers video frames (last 15 seconds)
-    - Saves a 30-second clip (15s before + 15s after) whenever
-      specific objects are detected in the frame
-    - Stores event metadata (timestamp, GPS, filepath)
-
-Dependencies:
-    pip install ultralytics opencv-python
-"""
-
 import cv2
 import os
 import time
@@ -24,7 +8,7 @@ from datetime import datetime
 from ultralytics import YOLO
 
 # -----------------------------------------------------------
-# Configuration (you can tweak these)
+# Configuration 
 # -----------------------------------------------------------
 PRE_SECONDS = 15               # seconds to keep in buffer (before event)
 POST_SECONDS = 15              # seconds to save after event
